@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}    
+    <div>
+        Menu:<br><br>
+        {% if login %}
+        <a href="{{ url_for('route_main.logout') }}">Выход</a><br>
+        <a href="{{ url_for('route_reports.exec_rep_exp_nds') }}">Просроченный НДС</a><br>
+        <a href="{{ url_for('route_reports.exec_rep_admin_costs') }}">Админ. расходы</a><br>
+        <a href="{{ url_for('route_reports.exec_rep_elevators_input') }}">Поступления на элеваторы (нал/безнал) + Хозяйства</a><br>
+        <a href="{{ url_for('route_reports.exec_rep_check_681') }}">Сверка по 681 показателю</a><br>
+        {% else %}
+        <a href="{{ url_for('route_main.login') }}">Вход</a><br>    
+        {% endif %}               
+    </div>
+{% endblock %}

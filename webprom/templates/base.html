@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='css/style2.css') }}" rel="stylesheet" type="text/css">
+        {% if style %}
+        <link href="{{ url_for('static', filename='css/'+style) }}" rel="stylesheet" type="text/css">
+        {% endif %}  
+        {% if style2 %}
+        <link href="{{ url_for('static', filename='css/'+style2) }}" rel="stylesheet" type="text/css">
+        {% endif %} 
+        {% if script %}
+        <script src="{{ url_for('static', filename='js/'+script) }}"></script> 
+        {% endif %}    
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Web Prom</title>
+        {% endif %}
+    </head>
+    <body>
+        <div id="header">
+            <p class="logo">Прометей</p> 
+            <p class="slogan"></p>
+        </div>
+        <div id="container">
+            <div id="inner">            
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

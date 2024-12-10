@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 style="text-align:center">{{ title }}</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <fieldset>
+            {{ form.since.label }} {{ form.since(class_="date") }} {{ form.till.label }} {{ form.till(class_="date") }} <br>
+            {{ form.goods.label }} {{ form.goods() }}
+            {{ form.submit(class_="button1") }}
+        </fieldset>
+    </form>
+    <div id="chartContainer" style="height: 900px; width: 100%; font-size:12">
+    </div>
+    <script type="text/javascript">
+        var totals = {{ totals | tojson }};
+        var items1 = {{ items1 | tojson }};
+        var items2 = {{ items2 | tojson }};
+        var items3 = {{ items3 | tojson }};
+        var nal = (totals.amount - totals.beznal - totals.farms).toFixed(3);
+        
+        //console.log(totals);
+        //console.log(items1);
+        //console.log(items1);
+        //console.log(items1);
+
+        var chart = new CanvasJS.Chart("chartContainer",
+        {
+            backgroundColor: "#fbfbe5",
+            zoomEnabled: true,
+            title:{
+                text: totals.goodsname,
+                fontSize: 30
+            },
+            axisY2: {
+                title:"Поступило на элеваторы,т ",
+                titleFontSize: 24,
+            },
+            animationEnabled: true,
+            axisY: {
+                title: "Поступило на элеваторы " + (totals.amount??0) + " т",
+                titleFontSize: 24,
+                labelFontSize: 18
+            },
+            axisX :{
+                interval: 1,
+                labelFontSize: 14,
+            },
+            legend: {
+                verticalAlign: "bottom"
+            },
+            data: [
+                {        
+                    type: "stackedBar",  
+                    indexLabelFontSize: 18,
+                    indexLabelFontColor: "black",
+                    showInLegend: true,
+                    legendText: "Безнал "+ (totals.beznal??0) + " т (" + Math.round((totals.beznal??0)/(totals.amount??0) * 100) + "%)",
+                    dataPoints: items1 
+                }
+                ,
+                {        
+                    type: "stackedBar",  
+                    indexLabelFontSize: 18,
+                    indexLabelFontColor: "black",
+                    showInLegend: true,
+                    legendText: "Наличные "+ (nal??0) + " т (" + Math.round((nal??0)/(totals.amount??0) * 100) + "%)",
+                    dataPoints: items2      
+                }
+                ,
+                {
+                    type: "stackedBar",
+                    indexLabelFontSize: 18,
+                    indexLabelFontColor: "black",
+                    showInLegend: true,
+                    legendText: "Хозяйства " + (totals.farms??0) + " т (" + Math.round((totals.farms??0)/(totals.amount??0) * 100) + "%)",
+                    dataPoints: items3
+                }
+            ],
+            legend: {
+                cursor:"pointer",
+                fontSize: 20,
+                itemclick : function(e){
+                    if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                        e.dataSeries.visible = false;
+                    }
+                    else{
+                        e.dataSeries.visible = true;
+                    }
+                    chart.render();
+                }
+            }
+        });
+        
+        chart.render();
+    </script>
+{% endblock %}

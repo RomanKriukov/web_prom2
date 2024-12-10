@@ -1,0 +1,1 @@
+docker logs -f web_prom2

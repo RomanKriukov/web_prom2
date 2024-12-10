@@ -1,0 +1,1 @@
+docker run -v .:c:\app -p 8080:8080 -it flaskwin

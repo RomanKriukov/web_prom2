@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 style="text-align:center">{{ title }}</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <fieldset>
+            {{ form.date.label }} {{ form.date(class_="date") }} {{ form.submit(class_="button1") }}
+        </fieldset>
+    </form>
+    <button onclick="SwapAll(false);">Свернуть все</button>
+    <button onclick="SwapAll(true);">Развернуть все</button>
+    <br><br>
+    {{ table|safe }}
+{% endblock %}

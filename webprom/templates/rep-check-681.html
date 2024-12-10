@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}    
+    <h1 style="text-align:center">{{ title }}</h1>
+    <form action="" method="post" enctype="multipart/form-data" novalidate>
+        {{ form.hidden_tag() }}
+        <fieldset>
+            {{ form.since.label }} {{ form.since(class_="date") }} {{ form.till.label }} {{ form.till(class_="date") }} <br>
+            {{ form.file.label }} <input type="file" name="file" accept=".xls, .xlsx"> <br>
+            {{ form.account.label }} {{ form.account() }} <br>
+            {{ form.submit(class_="button1") }}
+        </fieldset>
+    </form>
+    <button onclick="SwapAll(false);">Свернуть все</button>
+    <button onclick="SwapAll(true);">Развернуть все</button>
+    <br><br>
+    {% if file %}
+        <a href="{{ url_for('route_main.download_file', filename=file) }}" download>Сверка по 681 показателю EXCEL</a>
+        <br><br>
+    {% endif %}
+    {{ table|safe }}
+{% endblock %}

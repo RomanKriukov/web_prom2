@@ -1,0 +1,43 @@
+FROM python:3.12
+
+WORKDIR /app
+
+#RUN pip install pipenv
+
+RUN python -m pip install --upgrade pip
+
+#COPY Pipfile* venv /app/
+
+#RUN pipenv install
+
+RUN pip install flask
+RUN pip install sqlalchemy
+RUN pip install pyodbc
+RUN pip install pandas
+RUN pip install numpy
+RUN pip install flask-wtf
+RUN pip install flask-cors
+RUN pip install pyjwt
+RUN pip install openpyxl
+RUN pip install cherrypy
+RUN pip install watchdog
+RUN pip install psutil
+
+COPY . .
+
+COPY sys c:/
+
+RUN cmd /c "msiexec /i c:\\msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES /quiet /norestart /L*V c:\\odbc.log"
+
+EXPOSE 8080
+
+ENV TZ=Europe/Kyiv
+ENV SQL_HOST=prometey.net.ua
+ENV SQL_PORT=1433
+ENV SQL_DRIVER=ODBC+Driver+17+for+SQL+Server
+ENV SQL_DB=fa
+ENV SESSION_LIFETIME_MINUTES=60
+ENV FLASK_PORT=8080
+
+#CMD ["python", "runserver.py"]
+CMD ["python", "watchdog_script.py"]

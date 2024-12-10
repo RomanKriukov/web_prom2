@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="" method="post" novalidate>
+        <fieldset id="user">
+            <legend>Регистрация</legend>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}
+                {{ form.username(size=20) }}
+            </p>
+            <p>
+                {{ form.password.label }}
+                {{ form.password(size=20) }}
+            </p>
+        </fieldset>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
+

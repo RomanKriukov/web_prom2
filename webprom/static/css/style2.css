@@ -1,0 +1,432 @@
+html {
+	position: relative;
+}
+body {
+	COLOR: #566047;
+	background-color: #fbfbe5;
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;	
+	/*	TEXT-ALIGN: center */
+}
+p,h1,pre {
+	margin:0px 10px 10px 10px;
+	}
+
+h1 {
+	font-size: 2em;
+	font-weight:100;
+	}
+#header {
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	font-size: 1em;
+	font-weight:200;
+	border-bottom:	1px Solid #566047;
+	width: 100%;
+	}
+.int {TEXT-ALIGN:right} 
+.number {TEXT-ALIGN:right} 
+.boldnumber {TEXT-ALIGN:right; color:black} 
+.string {TEXT-ALIGN:left} 
+
+.logo {
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	float:left;
+	}
+.slogan {
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	float:right;
+	}
+#footer {
+	/*padding:0px;
+	margin:0px;
+	float:bottom;
+	font-size: 75%;
+	border-top:	1px Solid #566047;*/
+	margin-top: 10px;
+	font-size: 75%;
+	border-top: 1px Solid #566047;
+	position: absolute;
+	bottom: -20px;
+	text-align: center;
+	width: 100%;
+}
+#container {
+	height:96%; 
+	clear: both;
+	}
+#container #menu {
+	float:left; 
+	padding-top: 0px;
+	margin-bottom: 10pt;
+	TEXT-ALIGN: center
+	}
+
+#menu ul {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-left: 0;
+	padding-top: 15px;
+	} 
+
+#menu li { 
+	font-size: 18pt;
+	border:2px solid #566047; 
+	margin-left: 5pt;
+	padding: 5px 15px;
+	list-style: none;
+	}
+
+#menu li a { 
+	text-decoration:none;
+	color:#566047;
+	}
+#greeting {
+	width:315px;
+	float:left;
+	}
+#greeting h1 {
+	display:block;
+	margin:0px 0px 0px 0px;
+	padding-left:25px;
+	font:1em Tahoma;
+	line-height:180%;
+	text-indent:12px;
+}
+.contacts {
+	width:150px;
+	padding-left:25px;
+	float:left;
+	font:0.7em Tahoma;
+	padding-bottom:10px
+}
+.contacts h4 {
+	font:bold 1em Tahoma;
+}
+.about {
+	float:right;
+	font:0.8em Tahoma;
+	padding:5px 10px 5px 27px;
+}
+.about p {padding: 5px 0}
+/*
+div.form {
+	margin-top: 20pt;
+	padding-bottom: 20pt;
+	width: 600px;
+}
+
+div.para {
+	clear: both;
+	padding-left: 0pt;
+	border:	1px Solid #566047;
+	}
+div.row {
+	clear: both;
+	height: 20px;
+	font: 75%;
+	}
+
+
+div.row span.label {
+	float: left;
+	padding-right: 20px;
+	width: 40%;
+	text-align: right;
+	}
+
+div.row span.formw {
+	float: right;
+	padding-left: 15px;
+	width: 58%;
+	text-align: left;
+	} 
+*/
+.help {
+	clear: both;
+	float: bottom;
+	width: 90%;
+	text-align: center;
+	} 
+.error {
+	color:red;
+	}
+	
+select {
+	width:150px;
+	}
+input.button {
+	width:100px;
+	background-color:#fbfbe5;
+	COLOR: #566047;
+	}
+
+.list_button {
+	width:30px;
+	background-color:#fbfbe5;
+	COLOR: #566047;
+	}
+.dt_button {
+	width: 100px;
+	background-color:#fbfbe5;
+	COLOR: #566047;
+	}
+
+#toolbar {
+	clear: both;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	float: left;
+	font:icon;
+}
+#toolbar UL {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 10px; LIST-STYLE-TYPE: none
+}
+#toolbar LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 9px; BACKGROUND: url(style2/left_both.gif) no-repeat left top; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: #765 1px solid
+}
+#toolbar ul .static {
+	cursor: default;
+	PADDING-RIGHT: 15px; DISPLAY: block; PADDING-LEFT: 16px; FONT-WEIGHT: bold; BACKGROUND: url(style2/right_both.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 4px; WIDTH: 0.1em; COLOR: #765; PADDING-TOP: 5px; TEXT-DECORATION: none
+	}
+#toolbar A {
+	PADDING-RIGHT: 15px; DISPLAY: block; PADDING-LEFT: 6px; FONT-WEIGHT: bold; BACKGROUND: url(style2/right_both.gif) no-repeat right top; FLOAT: left; PADDING-BOTTOM: 4px; WIDTH: 0.1em; COLOR: #765; PADDING-TOP: 5px; TEXT-DECORATION: none
+}
+#toolbar A {
+	FLOAT: none
+}
+#toolbar A:hover {
+	COLOR: #333
+}
+#toolbar LI:hover {
+	BACKGROUND-POSITION: 0% -150px; COLOR: #333
+}
+#toolbar LI:hover A {
+	BACKGROUND-POSITION: 0% -150px; COLOR: #333
+}
+#toolbar LI:hover A {
+	BACKGROUND-POSITION: 100% -150px
+}
+
+.totals {
+	font-size: 100%;
+	font-color: red;
+	}
+
+#grid {
+	clear: both;
+	float:top;
+	}
+
+#tbl {
+	margin:0px 0px 0px 5px;
+	empty-cells:show;
+	float:left;
+/*	font:Icon;*/
+	font-size: 100%;
+	border:	1px Solid #566047;
+        font-weight: 900;
+	clear: both;
+	}
+
+#tbl a{
+/*	font:Icon;*/
+	}
+
+#tbl tr {
+	vertical-align : top; 
+	}
+
+#tbl td {
+	padding:2px 2px;
+	}
+
+#tbl thead th {
+	border:	10px solid #EEE8CD;
+	background-color : #EEE8CD;
+	cursor:	hand;
+	padding:2px 0px;
+	}
+
+#tbl tbody th {
+	color : #566047;
+	font-weight:0;
+}
+
+.column_header {
+	background-color : #EEE9BF;
+	}
+#tbl col.digit {
+	text-align : right; 
+	color : #566047;
+/*	font-family:monospace; */
+	}
+#tbl tr.odd {
+	background-color : #EEE9BF;
+	}
+table {
+	margin:0px 0px 0px 5px;
+	empty-cells:show;
+	float:left;
+/*	font:Icon;*/
+	font-size: 100%;
+	font-weight:4;
+	border:	1px Solid #566047;
+	clear: both;
+	}
+
+table a{
+/*	font:Icon;*/
+	}
+
+table tr {
+	vertical-align : top; 
+	}
+
+table td {
+	padding:2px 2px;
+	}
+
+table thead th {
+	border:	10px solid #EEE8CD;
+	background-color : #EEE8CD;
+	cursor:	hand;
+	padding:2px 0px;
+	}
+
+table tbody th {
+	color : #566047;
+	font-weight:0;
+}
+table col.digit {
+	text-align : right; 
+	color : #566047;
+	}
+table td.digit {
+	text-align : right; 
+	color : #566047;
+	}
+
+/* CSS Document */
+/* with :focus and :hover for fieldset, input and textarea - special effects are not visible with ie, sorry */
+/* sabine brings - www.brings-online.com - a form with style - www.cssplay.co.uk */
+form, form .check {background: #EEE9BF;}
+form input, form textarea {background:#c5d3e0;}
+form input:hover, form textarea:hover, form .button1, form .button2, form .list_button, form .dt_button {background:#CDC9A5;}
+form input:focus, form input:focus, form textarea:focus, form option, form optgroup, form optgroup option {background:#fff;}
+form .button1:hover, form .button2:hover {background:#414d59;}
+form p, form legend, form label, form input:hover, form textarea:hover, form .button1:hover, form .button2:hover {color:#566047;}
+form input:focus, form textarea:focus, form option, form optgroup option, form optgroup {color:#000;}
+
+form {
+	clear: both;
+	font-size:100%; 
+	width:500px; 
+	padding:5px; 
+	border:1px solid #566047; 
+	margin:5px auto; 
+	}
+
+form p {text-align:left; padding:5px 5px 5px 0; margin:0;}
+form fieldset#current p {padding:4px; margin:0;}
+
+form fieldset {
+	text-align:left;
+	width:480px; 
+	display:block; 
+	border:1px solid #8B814C; 
+	padding:5px 5px 5px 5px; 
+	margin-bottom:0.1em; 
+	line-height:1em; 
+	font-size:2em; 
+}
+form fieldset:hover {border:1px solid #fff;}
+
+form legend {
+	font-size:1.0em; 
+	border-bottom:2px solid #8B814C;
+	margin-bottom:15px; 
+	padding:6px; 
+	}
+
+* html form legend { padding:0 0 15px 0; margin:5px 0 0 0; border:none;}
+
+form label {
+	clear:left; 
+	display:block; 
+	font-size:1.0em; 
+	float:left; 
+	width:50%; 
+	text-align: right;
+	padding-right:10px; 
+	margin-bottom:0.5em;
+}
+
+form input {border:1px solid #414d59; padding-left:0.5em; margin-bottom:0.6em; width:200px;}
+form input.date {width:120px;}
+form input.check {width:20px;border:0;}
+form input:hover {border:1px solid #fff;}
+form input:focus {border:1px solid #b80b38;}
+form * .row, form * .narrow {width:49%;}
+
+form select {margin:0 0 0.6em 0.5em; width:240px;}
+form textarea {width:410px; height:15em; border:1px solid #fff; padding:0.5em; overflow:auto;}
+form textarea:hover {border:1px solid #fff;}
+form textarea:focus {border:1px solid #b80b38;}
+
+form optgroup {font-style:normal;}
+
+form .button1, form .button2 {padding-right:0.5em; cursor:pointer; width:100px; margin-left:8px; border:1px solid ThreeDShadow; }
+form .button1:hover, form .button2:hover {border:1px solid; border-color:#4f718a #003 #003 #4f718a; }
+
+.sort-table tr {
+        vertical-align : top; 
+}
+
+.sort-table tr.odd{
+background:	#EEDD82;
+}
+
+.sort-table {
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	#EEE8AA;
+	color:		WindowText;
+}
+
+.sort-table a{
+	font:		Icon;
+}
+
+.sort-table thead {
+	background:	#D2B48C;
+	color:		#8B6508;
+}
+
+.sort-table td {
+	padding:	2px 5px;
+}
+.sort-table td.em { 
+	background-color: #f0e68c; 
+}
+.sort-table td.red { 
+	color: red; 
+}
+.sort-table thead td {
+	border:			1px solid;
+	border-color:	#8B8B00 #8B8878
+					#8B8878 #8B8B00;
+	cursor:			default;
+	text-align : center; 
+}
+.sort-table col.digit {
+        text-align : right; 
+        color : black;
+}
+.sort-table col.string {
+        text-align : left; 
+        color : #8B6508;
+}
